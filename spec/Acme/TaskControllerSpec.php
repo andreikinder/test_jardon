@@ -30,4 +30,10 @@ class TaskControllerSpec extends ObjectBehavior
         $repository->create('...')->shouldBeCalled();
         $this->store();
     }
+
+    function it_show_a_specific_task(Authtorizer $authtorizer){
+
+        $authtorizer->guest()->willReturn(false);
+        $this->show()->shouldReturn('a task');
+    }
 }

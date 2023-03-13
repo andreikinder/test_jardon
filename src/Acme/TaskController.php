@@ -21,4 +21,8 @@ class TaskController
 
         $this->repository->create('...');
     }
+
+    public function show(){
+        return 'a task';
+    }
 }
